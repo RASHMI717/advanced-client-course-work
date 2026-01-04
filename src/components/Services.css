@@ -1,0 +1,172 @@
+
+
+
+
+/* ===============================
+   SERVICES SECTION
+================================ */
+.services-section {
+  width: 100%;
+  padding: 110px 0 120px;
+
+  /* 🌿 Dark emerald + gold background image */
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("/images/services-bg.jpg"); /* ← YOUR background image */
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===============================
+   INNER WRAPPER
+================================ */
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===============================
+   SECTION HEADER
+================================ */
+.services-header {
+  margin-bottom: 56px;
+}
+
+.services-header span {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  color: #d8c28a;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services-header h2 {
+  font-family: "Forum", serif;
+  font-size: 46px;
+  font-weight: 400;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   SERVICES GRID
+================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ===============================
+   SERVICE CARD (GLASS)
+================================ */
+.service-card {
+  position: relative;
+  padding: 34px 30px 38px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+
+  border: 1px solid rgba(245, 217, 139, 0.25);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* ✨ Gold glow on hover */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(245, 217, 139, 0.25);
+}
+
+/* ===============================
+   ICON
+================================ */
+
+.service-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 18px;
+}
+
+
+/* ===============================
+   CARD CONTENT
+================================ */
+.service-card h3 {
+  font-family: "Forum", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===============================
+   READ MORE LINK
+================================ */
+.service-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d8c28a;
+  text-decoration: none;
+  position: relative;
+}
+
+.service-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #f5d98b;
+  transition: width 0.3s ease;
+}
+
+.service-link:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-header h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .services-section {
+    padding: 90px 0;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+  }
+}

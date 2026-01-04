@@ -1,0 +1,262 @@
+/* ===============================
+   PAGE WRAPPER
+================================ */
+
+.property-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b0b0b, #000000);
+  color: #ffffff;
+  overflow-x: hidden; /* 🔑 prevent mobile horizontal scroll */
+}
+
+/* ===============================
+   FULL WIDTH GALLERY
+================================ */
+
+.property-gallery {
+  width: 100%;
+  margin-top: 80px; /* navbar height protection */
+}
+
+/* ===============================
+   IMAGE GALLERY FIX (THUMBNAILS)
+================================ */
+
+.image-gallery {
+  width: 100%;
+}
+
+.image-gallery-slide-wrapper {
+  width: 100%;
+}
+
+/* Main image */
+.image-gallery-slide img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Thumbnails wrapper */
+.image-gallery-thumbnails-wrapper {
+  margin-top: 16px;
+  padding: 0 12px;
+}
+
+/* Thumbnails container */
+.image-gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;              /* 🔑 MOBILE FIX */
+  scrollbar-width: none;
+}
+
+.image-gallery-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+/* Thumbnail item */
+.image-gallery-thumbnail {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  flex: 0 0 auto;                /* 🔑 prevent shrink */
+  transition: all 0.3s ease;
+}
+
+/* Thumbnail image */
+.image-gallery-thumbnail img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Active thumbnail */
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:hover {
+  border-color: #f5d98b;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   CONTENT WRAPPER
+================================ */
+
+.property-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 24px 90px;
+  text-align: center;
+}
+
+/* ===============================
+   TITLE
+================================ */
+
+.property-title {
+  font-family: "Forum", serif;
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 14px;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===============================
+   LOCATION
+================================ */
+
+.property-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #d8c28a;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   META INFO
+================================ */
+
+.property-meta {
+  display: flex;
+  flex-wrap: wrap;               /* 🔑 MOBILE SAFE */
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+  font-size: 15px;
+}
+
+.property-price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f5d98b;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Divider */
+.meta-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ===============================
+   TABS
+================================ */
+
+.property-tabs {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tab list */
+.react-tabs__tab-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 26px;
+}
+
+/* Tab */
+.react-tabs__tab {
+  color: #d8c28a;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Active tab */
+.react-tabs__tab--selected {
+  color: #1f1e1b;
+  border-bottom: 2px solid #f5d98b;
+}
+
+/* Description */
+.property-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Floor plan */
+.floorplan-img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Map */
+.property-tabs iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 14px;
+  border: none;
+}
+
+/* ===============================
+   RESPONSIVE — TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .image-gallery-slide img {
+    height: 55vh;
+  }
+
+  .property-title {
+    font-size: 36px;
+  }
+
+  .property-content {
+    padding: 40px 20px 80px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .image-gallery-slide img {
+    height: 42vh;
+  }
+
+
+  .property-title {
+    font-size: 30px;
+  }
+
+  .property-price {
+    font-size: 20px;
+  }
+
+  .property-meta {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .image-gallery-thumbnail img {
+    width: 70px;
+    height: 48px;
+  }
+
+  .react-tabs__tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+

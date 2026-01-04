@@ -1,0 +1,151 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #c2279b;
+  color: #333;
+  
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #ffffff;
+  color: rgb(12, 7, 7);
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  font-size: 22px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-image: url("/images/hero.jpg"); /* your hero image */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 6px;
+}
+
+
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== PROPERTY LIST ===== */
+.property-list {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ===== PROPERTY CARD ===== */
+.property-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+
+
+
+.property-card h3 {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.property-card p {
+  padding: 0 10px;
+}
+
+
+
+.property-card a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #0b2c4d;
+  font-weight: bold;
+}
+
+/* ===== FAVOURITES SIDEBAR ===== */
+.favourites-sidebar {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  height: fit-content;
+}
+
+.favourite-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* ===== IMAGE GALLERY ===== */
+.image-gallery {
+  margin: 20px 0;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ===== PROPERTY PAGE ===== */
+.property-page {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  border-radius: 6px;
+}
+
+/* ===== FOOTER (FOR LATER) ===== */
+

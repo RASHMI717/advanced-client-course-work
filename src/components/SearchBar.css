@@ -1,0 +1,212 @@
+/* ===============================
+   SEARCH BAR WRAPPER
+   (FLOATING BETWEEN HERO & PROPERTIES)
+================================ */
+
+.search-wrapper {
+  position: absolute;              /* 🔑 removes from normal flow */
+  left: 50%;
+  bottom: -130px;                   /* 🔑 pushes it into properties */
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 1100px;
+
+  z-index:50;
+ 
+
+  
+
+  
+}
+
+/* ===============================
+   CATEGORY TABS (TOP)
+================================ */
+
+.category-tabs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 22px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 14px 14px 0 0;
+
+  width: fit-content;
+}
+
+.category-tabs span {
+  color: #d8c28a;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.category-tabs span:hover {
+  color: #f5d98b;
+}
+
+.category-tabs span.active {
+  color: #f5d98b;
+}
+
+.category-tabs span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  transition: width 0.35s ease;
+}
+
+.category-tabs span.active::after {
+  width: 100%;
+}
+
+.category-tabs .divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===============================
+   SEARCH CARD
+================================ */
+
+.search-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 22px;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+
+  border-radius: 0 18px 18px 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ===============================
+   INPUTS & SELECTS
+================================ */
+
+.search-bar input,
+.search-bar select {
+  height: 44px;
+  padding: 0 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar select {
+  appearance: none;
+  color: #ffffff;
+}
+
+.search-bar select option {
+  color: #000000;
+  background: #ffffff;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+  border-color: #f5d98b;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===============================
+   SEARCH BUTTON
+================================ */
+
+.search-bar button {
+  grid-column: span 4;
+  height: 48px;
+
+  min-height: 48px;
+  min-width: 220px;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  border: none;
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-bar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(245, 217, 139, 0.35);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .search-wrapper {
+    margin: -70px auto 36px;
+    padding: 0 18px;
+  }
+
+  .search-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .search-bar button {
+    grid-column: span 2;
+    height: 46px;
+    font-size: 16.5px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .search-wrapper {
+    margin: -60px auto 30px;
+    padding: 0 12px;
+  }
+
+  .search-bar {
+    padding: 18px;
+    
+  }
+
+  .search-bar button {
+    height: 44px;
+    font-size: 16px;
+    max-width: 260px;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 0;
+  }
+}

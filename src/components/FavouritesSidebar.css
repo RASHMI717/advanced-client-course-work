@@ -1,0 +1,178 @@
+/* ================= Sidebar container ================= */
+.favourites-sidebar {
+  width: 300px;
+  padding: 16px;
+
+  /* Glass look */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Title */
+.favourites-sidebar h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= Empty state ================= */
+.empty-state {
+  text-align: center;
+  padding: 24px 10px;
+  color: #666;
+}
+
+.empty-state img {
+  width: 130px;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+/* ================= Scroll list ================= */
+.favourites-list {
+  max-height: 460px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Custom scrollbar (modern & small) */
+.favourites-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.favourites-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.favourites-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.favourites-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ================= Compact card ================= */
+.favourite-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.favourite-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= Clickable link ================= */
+.favourite-link {
+  display: flex;
+  gap: 14px;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Thumbnail image */
+.favourite-link img {
+  width: 95px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= Info ================= */
+.fav-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* Property title (TOP) */
+.fav-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Price (VERTICALLY CENTERED) */
+.fav-price {
+  margin-top: auto; /* 🔑 pushes price to middle-right */
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6652d;
+  margin-bottom: auto;   
+}
+
+/* ================= Remove icon ================= */
+.remove-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 16px;
+  color: #e53935;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.favourite-card:hover .remove-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================= Clear button ================= */
+.clear-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 9px;
+  background: #e6652d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #cc5724;
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 768px) {
+  .favourites-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+  }
+
+  .favourites-list {
+    max-height: 320px;
+  }
+}

@@ -1,0 +1,185 @@
+/* ===============================
+   ABOUT SECTION BACKGROUND
+================================ */
+.about-section {
+  width: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    #1a1a1a 0%,
+    #d1b182 70%
+  );
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Smooth transition into next section */
+.about-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.65)
+  );
+}
+
+/* ===============================
+   INNER WRAPPER
+================================ */
+.about-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* ===============================
+   IMAGE + GLOW
+================================ */
+.about-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+ 
+}
+
+/* Gold glow behind arch */
+.arch-glow {
+  position: absolute;
+  width: 420px;
+  height: 520px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(245, 217, 139, 0.35),
+    rgba(228, 215, 143, 0.56) 70%
+  );
+  filter: blur(70px);
+  z-index: 0;
+
+  animation: glowPulse 4.5s ease-in-out infinite;
+}
+
+/* Arch image */
+.arch-svg {
+  width: 420px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.8));
+
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+/* ===============================
+   CONTENT CARD
+================================ */
+.about-card {
+  color: #ffffff;
+
+  
+}
+
+/* IntersectionObserver trigger */
+
+
+/* ===============================
+   HEADING
+================================ */
+.about-card h2 {
+  font-family: "Forum", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 26px;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 4s linear infinite;
+}
+
+/* ===============================
+   SUBTITLE
+================================ */
+.about-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #d8c28a;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   PARAGRAPHS
+================================ */
+.about-card p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+
+
+@keyframes glowPulse {
+  0% { opacity: 0.55; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.55; }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    text-align: center;
+  }
+
+  .arch-svg {
+    width: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-section {
+    padding: 100px 0;
+  }
+
+  .arch-svg {
+    width: 260px;
+  }
+
+  .about-card {
+    padding: 36px;
+  }
+}

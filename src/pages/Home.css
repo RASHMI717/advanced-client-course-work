@@ -1,0 +1,128 @@
+/* ===============================
+   PROPERTIES — FULL WIDTH LUXURY
+================================ */
+
+.properties-section {
+  width: 100%;
+  padding-top: 140px;   /* 🔑 space for floating bar */
+  padding-bottom: 70px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(201, 164, 75, 0.12),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #0b0b0b 0%, #000000 100%);
+}
+
+
+/* ===============================
+   SECTION HEADER
+================================ */
+
+.section-subtitle {
+  max-width: 1280px;
+  margin: 0 auto 10px;
+  padding: 0 20px;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #d8c28a;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.section-title {
+  max-width: 1280px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+
+  font-family: "Forum", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===============================
+   CONTENT LAYOUT
+================================ */
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  gap: 24px;
+}
+
+/* Give favourites sidebar comfortable width on large screens */
+.favourites-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   RESPONSIVE — TABLET
+================================ */
+
+@media (max-width: 1024px) {
+
+  .properties-section {
+    padding-top: 200px; /* ⬆️ more room for taller search bar */
+  }
+  .section-title {
+    font-size: 36px;
+  }
+
+  .layout {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .favourites-sidebar {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .properties-section {
+    padding: 70px 0 60px;
+    padding-top: 240px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .layout {
+    padding: 0 16px;
+    gap: 22px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .layout {
+    padding: 0 14px;
+  }
+}
+

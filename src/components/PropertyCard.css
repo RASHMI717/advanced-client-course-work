@@ -1,0 +1,116 @@
+/* === CARD WRAPPER === */
+.property-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* === IMAGE SECTION === */
+.property-image-wrapper {
+  position: relative; /* 🔑 allows absolute positioning inside */
+}
+
+.property-image-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* === SALE / RENT TAG === */
+.tag {
+  position: absolute; /* 🔑 places ON image */
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.tag.sale {
+  background-color: #28a745;
+}
+
+.tag.rent {
+  background-color: #ff5722;
+}
+
+/* === CONTENT SECTION === */
+.property-content {
+  padding: 16px;
+}
+
+/* === ADDRESS ROW (ICON + STAR) === */
+.address-row {
+  display: flex;               /* 🔑 horizontal layout */
+  justify-content: space-between; /* left + right */
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* === FAVOURITE STAR === */
+.favourite-star {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* === TITLE === */
+.property-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0;
+  color: #222;
+}
+
+/* === DESCRIPTION === */
+.property-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* === DIVIDER === */
+.property-content hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 12px 0;
+}
+
+/* === BOTTOM INFO ROW === */
+.property-info {
+  display: flex;                 /* 🔑 side-by-side */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  color: #555;
+}

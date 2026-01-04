@@ -1,0 +1,182 @@
+/* ===== Navbar container ===== */
+.navbar {
+  position: fixed;             /* 🔑 stays on top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  height: 100px;
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 🔑 DEFAULT: transparent over hero */
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: background 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+/* 🔑 WHEN SCROLLED */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.726);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(252, 234, 176, 0.185);
+}
+
+/* ===== Sections ===== */
+.nav-left,
+.nav-right {
+  width: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+/* ===== Logo ===== */
+.navbar img {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ===== Desktop menu ===== */
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 44px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center li {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-center li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  transition: width 0.3s ease;
+}
+
+.nav-center li:hover::after {
+  width: 100%;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* X animation */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RIGHT SIDE SLIDE MENU ===== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+  width: 300px;
+  padding: 28px 22px;
+
+  background: rgba(15, 18, 22, 0.92);
+  backdrop-filter: blur(14px);
+
+  box-shadow: -10px 0 30px rgba(0,0,0,0.45);
+  z-index: 1100;
+
+  animation: slideFromRight 0.35s ease-out;
+}
+
+/* Slide animation */
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===== Mobile menu list ===== */
+.mobile-menu ul {
+  list-style: none;
+  margin-top: 80px;
+  padding: 0;
+}
+
+.mobile-menu li {
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobile-menu li:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.mobile-menu li:hover {
+  color: #9b5cff;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar img {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+  }
+}

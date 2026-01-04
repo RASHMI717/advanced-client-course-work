@@ -1,0 +1,254 @@
+/* ===============================
+   GOOGLE FONTS
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Cormorant+Garamond:wght@500&display=swap");
+
+/* ===============================
+   SECTION WRAPPER
+================================ */
+.contact-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+
+  background-image: url("/images/contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.88)
+  );
+  z-index: 0;
+}
+
+/* ===============================
+   INNER GRID
+================================ */
+.contact-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ===============================
+   LEFT — FORM
+================================ */
+.contact-form {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 22px;
+  padding: 44px;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(245, 217, 139, 0.18);
+}
+
+/* Form title */
+.contact-form h3 {
+  font-family: "Forum", serif;
+  font-size: 28px;
+  margin-bottom: 22px;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(245, 217, 139, 0.22);
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===============================
+   SUBMIT BUTTON — GOLD SHIMMER
+================================ */
+.contact-form button {
+  position: relative;
+  overflow: hidden;
+
+  margin-top: 12px;
+  padding: 14px 32px;
+
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contact-form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.7),
+    transparent 70%
+  );
+  transition: left 0.7s ease;
+}
+
+.contact-form button:hover::after {
+  left: 120%;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(245, 217, 139, 0.45);
+}
+
+/* ===============================
+   RIGHT — TEXT CONTENT
+================================ */
+.contact-content {
+  color: #ffffff;
+}
+
+.contact-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d8c28a;
+  margin-bottom: 12px;
+}
+
+.contact-content h2 {
+  font-family: "Forum", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 26px;
+
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-content p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===============================
+   RESPONSIVE — TABLET & MOBILE
+   (CONTENT FIRST, FORM BELOW)
+================================ */
+@media (max-width: 1024px) {
+  .contact-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  /* CONTENT FIRST */
+  .contact-content {
+    order: 1;
+    text-align: center;
+  }
+
+  /* FORM BELOW */
+  .contact-form-wrapper {
+    order: 2;
+  }
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 90px 0;
+  }
+
+  .contact-form {
+    padding: 36px;
+  }
+
+  .contact-content h2 {
+    font-size: 34px;
+  }
+
+  .contact-content p {
+    font-size: 18px;
+  }
+  
+  
+}
+
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .contact-inner {
+    padding: 0 20px;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-content h2 {
+    font-size: 30px;
+  }
+  
+}
+

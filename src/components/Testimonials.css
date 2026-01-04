@@ -1,0 +1,230 @@
+/* ===============================
+   GOOGLE FONT
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+/* ===============================
+   SECTION
+================================ */
+.testimonials-section {
+  background: radial-gradient(
+    ellipse at top,
+    #111111 0%,
+    #000000 70%
+  );
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.testimonials-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.testimonials-header {
+  margin-bottom: 40px;
+}
+
+.testimonials-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  color: #d8c28a;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.testimonials-header h2 {
+  font-family: "Forum", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.2;
+  background: linear-gradient(to right, #c9a44b, #f5d98b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   MARQUEE CONTAINER
+================================ */
+.testimonials-track {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Touch swipe support */
+@media (hover: none) {
+  .testimonials-track {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .testimonials-track::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.testimonials-marquee {
+  display: flex;
+  width: max-content;
+  animation: scrollTestimonials 40s linear infinite;
+  will-change: transform;
+}
+
+/* Pause animation on hover */
+.testimonials-track:hover .testimonials-marquee {
+  animation-play-state: paused;
+}
+
+/* Pause animation while touching */
+@media (hover: none) {
+  .testimonials-track:active .testimonials-marquee {
+    animation-play-state: paused;
+  }
+}
+
+/* ===============================
+   CARD (FIXED SIZE)
+================================ */
+.testimonial-card {
+  width: 300px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 22px;
+  color: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 24px; /* ✅ replaces gap */
+}
+
+/* Avatar */
+.testimonial-card img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Name */
+.testimonial-card h4 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+/* Subtitle */
+.testimonial-card span {
+  font-size: 13px;
+  color: #d8c28a;
+}
+
+/* Text */
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 14px 0;
+  color: rgba(255, 255, 255, 0.9);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Stars */
+.stars {
+  color: #ffde21;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* ===============================
+   SMOOTH INFINITE SCROLL
+================================ */
+@keyframes scrollTestimonials {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===============================
+   RESPONSIVE — TABLET
+================================ */
+@media (max-width: 1024px) {
+  .testimonials-inner {
+    padding: 0 24px;
+  }
+
+  .testimonials-header h2 {
+    font-size: 34px;
+  }
+
+  .testimonial-card {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .testimonial-card p {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — MOBILE
+================================ */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 70px 0;
+  }
+
+  .testimonials-header h2 {
+    font-size: 28px;
+  }
+
+  .testimonial-card {
+    width: 260px;
+    padding: 18px;
+  }
+
+  .testimonial-card p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .testimonials-inner {
+    padding: 0 18px;
+  }
+
+  .testimonial-card {
+    width: 240px;
+    padding: 16px;
+  }
+
+  .testimonial-card p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+
