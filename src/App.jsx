@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/advanced-client-course-work">
       <Routes>
         <Route
           path="/"
