@@ -13,6 +13,7 @@ import Services from "../components/Services";
 import Testimonials from "../components/Testimonials.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
+import RemoveDropZone from "../components/RemoveDropZone"; // 🆕 import
 
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
@@ -44,6 +45,9 @@ function Home({ favourites, addFavourite, removeFavourite, clearFavourites }) {
 
   return (
     <DndProvider backend={HTML5Backend}>
+      {/* 🗑️ DRAG TO REMOVE ZONE */}
+      <RemoveDropZone onRemove={removeFavourite} />
+
       <Navbar />
 
       {/* Hero section */}

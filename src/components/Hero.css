@@ -13,7 +13,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  overflow: hidden; /*  needed for fade effects */
+  overflow: hidden; /* 🔑 needed for fade effects */
 }
 
 /* ===== TOP DARK OVERLAY ===== */
@@ -56,7 +56,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding-top: 64px; /*  text slightly higher (was centered) */
+  padding-top: 64px; /* 🔑 text slightly higher (was centered) */
   text-align: center;
 
   color: #ffffff;

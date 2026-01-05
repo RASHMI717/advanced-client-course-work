@@ -35,7 +35,7 @@ function PropertyCard({ property, onAddFavourite, isInFavourites }) {
       {/* IMAGE */}
       <div className="property-image-wrapper">
         <img
-          src={`./images/${property.images[0]}`}
+          src={`${import.meta.env.BASE_URL}images/${property.images[0]}`}
           alt={property.title}
         />
 

@@ -8,18 +8,29 @@ import "react-tabs/style/react-tabs.css";
 import { LuMapPin } from "react-icons/lu";
 import { IoBedOutline } from "react-icons/io5";
 import { PiBathtubBold } from "react-icons/pi";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./PropertyPage.css";
 
-function PropertyPage() {
+function PropertyPage({ favourites, addFavourite, removeFavourite }) {
   const { id } = useParams();
   const property = properties.find((p) => p.id === id);
 
   if (!property) {
     return <p>Property not found</p>;
+  }
+
+  const isFavourite = favourites.some((fav) => fav.id === property.id);
+
+  function handleToggleFavourite() {
+    if (isFavourite) {
+      removeFavourite(property.id);
+    } else {
+      addFavourite(property);
+    }
   }
 
   return (
@@ -37,7 +48,17 @@ function PropertyPage() {
         {/* CONTENT */}
         <div className="property-page-content">
 
-          <h1 className="property-page-title">{property.title}</h1>
+          <div className="title-row">
+            <h1 className="property-page-title">{property.title}</h1>
+            <button
+              className={`fav-btn-large ${isFavourite ? "active" : ""}`}
+              onClick={handleToggleFavourite}
+              aria-label="Toggle Favourite"
+            >
+              {isFavourite ? <FaHeart /> : <FaRegHeart />}
+              <span>{isFavourite ? "Saved" : "Save"}</span>
+            </button>
+          </div>
 
           {/* LOCATION */}
           <div className="property-page-location">
