@@ -32,16 +32,16 @@ function FavouritesSidebar({ favourites, onRemove, onDrop, onClear }) {
         {favourites.map((property) => (
           <div key={property.id} className="favourite-card">
 
-            {/* ❌ Remove icon */}
+            {/* Remove icon */}
             <i
               className="fa-solid fa-xmark remove-icon"
               onClick={(e) => {
-                e.stopPropagation(); // 🚫 prevent navigation
+                e.stopPropagation(); //  prevent navigation
                 onRemove(property.id);
               }}
             ></i>
 
-            {/* ✅ Click card → go to property page */}
+            {/* Click card → go to property page */}
             <Link
               to={`./property/${property.id}`}
               className="favourite-link"
