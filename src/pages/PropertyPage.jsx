@@ -117,7 +117,7 @@ function PropertyPage({ favourites, addFavourite, removeFavourite }) {
               <iframe
                 title="map"
                 loading="lazy"
-                src={`https://www.google.com/maps?q=${property.location}&output=embed`}
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(property.location)}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
               ></iframe>
             </TabPanel>
           </Tabs>
