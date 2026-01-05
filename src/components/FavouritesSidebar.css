@@ -41,7 +41,7 @@
 }
 
 .empty-state img {
-  width: 130px;
+  width: 70px;
   margin-bottom: 12px;
   opacity: 0.85;
 }
@@ -125,7 +125,7 @@
   margin-top: auto; /* 🔑 pushes price to middle-right */
   font-size: 14px;
   font-weight: 600;
-  color: #e6652d;
+  color: #1b1a19;
   margin-bottom: auto;   
 }
 

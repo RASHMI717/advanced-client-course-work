@@ -21,7 +21,7 @@ function PropertyCard({ property, onAddFavourite, isInFavourites }) {
   }));
 
   function handleFavouriteClick(e) {
-    e.stopPropagation(); // ⭐ prevent navigation
+    e.stopPropagation(); //  prevent navigation
     onAddFavourite(property);
   }
 
@@ -35,7 +35,7 @@ function PropertyCard({ property, onAddFavourite, isInFavourites }) {
       {/* IMAGE */}
       <div className="property-image-wrapper">
         <img
-          src={`/images/${property.images[0]}`}
+          src={`./images/${property.images[0]}`}
           alt={property.title}
         />
 
@@ -78,7 +78,7 @@ function PropertyCard({ property, onAddFavourite, isInFavourites }) {
 
           <span className="features">
             <IoBedOutline /> {property.bedrooms} &nbsp;&nbsp;
-            <PiBathtub /> {property.bathrooms || 1}
+            <PiBathtub /> {property.bathrooms}
           </span>
         </div>
       </div>

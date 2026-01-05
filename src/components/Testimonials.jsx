@@ -40,7 +40,7 @@ export default function Testimonials() {
 
             {/* ===== ORIGINAL SET ===== */}
             <div className="testimonial-card">
-              <img src="/images/client1.jpg" alt="Client" />
+              <img src="./images/client1.jpg" alt="Client" />
               <h4>Dana Gilmore</h4>
               <span>Excellent team!</span>
               <p>
@@ -51,7 +51,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client2.jpg" alt="Client" />
+              <img src="./images/client2.jpg" alt="Client" />
               <h4>Ana Anderson</h4>
               <span>Very good work</span>
               <p>
@@ -61,7 +61,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client3.jpg" alt="Client" />
+              <img src="./images/client3.jpg" alt="Client" />
               <h4>Albert Adame</h4>
               <span>Very well</span>
               <p>
@@ -71,7 +71,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client4.jpg" alt="Client" />
+              <img src="./images/client4.jpg" alt="Client" />
               <h4>George Lopez</h4>
               <span>Amazing service</span>
               <p>
@@ -82,7 +82,7 @@ export default function Testimonials() {
 
             {/* ===== DUPLICATE SET (REQUIRED FOR SMOOTH LOOP) ===== */}
             <div className="testimonial-card">
-              <img src="/images/client1.jpg" alt="Client" />
+              <img src="./images/client1.jpg" alt="Client" />
               <h4>Dana Gilmore</h4>
               <span>Excellent team!</span>
               <p>
@@ -93,7 +93,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client2.jpg" alt="Client" />
+              <img src="./images/client2.jpg" alt="Client" />
               <h4>Ana Anderson</h4>
               <span>Very good work</span>
               <p>
@@ -103,7 +103,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client3.jpg" alt="Client" />
+              <img src="./images/client3.jpg" alt="Client" />
               <h4>Albert Adame</h4>
               <span>Very well</span>
               <p>
@@ -113,7 +113,7 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonial-card">
-              <img src="/images/client4.jpg" alt="Client" />
+              <img src="./images/client4.jpg" alt="Client" />
               <h4>George Lopez</h4>
               <span>Amazing service</span>
               <p>

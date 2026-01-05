@@ -15,7 +15,7 @@
       rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.75)
     ),
-    url("/images/services-bg.jpg"); /* ← YOUR background image */
+    url("./images/services-bg.jpg"); /* ← YOUR background image */
   
   background-size: cover;
   background-position: center;

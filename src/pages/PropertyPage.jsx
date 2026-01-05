@@ -30,24 +30,24 @@ function PropertyPage() {
       <div className="property-page">
 
         {/* FULL WIDTH IMAGE GALLERY */}
-        <div className="property-gallery">
+        <div className="property-page-gallery">
           <ImageGallery images={property.images} />
         </div>
 
         {/* CONTENT */}
-        <div className="property-content">
+        <div className="property-page-content">
 
-          <h1 className="property-title">{property.title}</h1>
+          <h1 className="property-page-title">{property.title}</h1>
 
           {/* LOCATION */}
-          <div className="property-location">
+          <div className="property-page-location">
             <LuMapPin />
             <span>{property.location}</span>
           </div>
 
           {/* META INFO */}
-          <div className="property-meta">
-            <span className="property-price">£{property.price}</span>
+          <div className="property-page-meta">
+            <span className="property-page-price">£{property.price}</span>
 
             <span className="meta-divider" />
 
@@ -71,7 +71,7 @@ function PropertyPage() {
           </div>
 
           {/* TABS */}
-          <Tabs className="property-tabs">
+          <Tabs className="property-page-tabs">
             <TabList>
               <Tab>Description</Tab>
               <Tab>Floor Plan</Tab>
@@ -79,14 +79,14 @@ function PropertyPage() {
             </TabList>
 
             <TabPanel>
-              <p className="property-description">
+              <p className="property-page-description">
                 {property.longDescription}
               </p>
             </TabPanel>
 
             <TabPanel>
               <img
-                src={`/images/${property.floorPlan}`}
+                src={`${import.meta.env.BASE_URL}images/${property.floorPlan}`}
                 alt="Floor Plan"
                 className="floorplan-img"
               />

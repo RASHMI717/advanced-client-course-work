@@ -31,7 +31,7 @@ function About() {
             </defs>
 
             <image
-              href="/images/About.jpg"
+              href="./images/About.jpg"
               width="400"
               height="520"
               clipPath="url(#trueArch)"

@@ -2,12 +2,13 @@
   {
     "id": "1",
     "title": "Luxury Family House",
-    "location": "Colombo",
-    "postcode": "C01",
+    "location": "187, Port Access Elevated Highway",
+    "postcode": "00130",
     "type": "House",
     "category": "For Sale",
-    "price": 350000,
-    "bedrooms": 4,
+    "price": 2500000,
+    "bedrooms": 3,
+    "bathrooms": 3,
     "dateAdded": "2025-02-10",
     "mainImage": "property1/main.webp",
     "images": [
@@ -18,19 +19,20 @@
       "property1/5.webp",
       "property1/6.webp"
     ],
-    "shortDescription":"hdhdkl",
-    "longDescription": "A luxury family house located in the heart of Colombo with modern facilities and spacious living areas.",
-    "floorPlan": "property1/floorplan.webp"
+    "shortDescription":"A luxury family house located in the heart of Colombo with modern facilities and spacious living areas.",
+    "longDescription": "This exquisite luxury family home is perfectly positioned in one of Colombo’s most sought-after residential neighborhoods. Designed for refined urban living, the residence offers spacious interiors, elegant finishes, and abundant natural light throughout. Open-plan living and dining areas create a seamless flow, ideal for both family life and stylish entertaining. The generously sized bedrooms provide comfort and privacy, with a master suite that feels like a personal retreat. A modern, fully equipped kitchen and thoughtfully planned outdoor spaces enhance everyday living with ease and sophistication. Combining prestige, comfort, and convenience, this home represents luxury family living at its finest in Colombo.",
+    "floorPlan": "./property1/floorplan.webp"
   },
   {
     "id": "2",
     "title": "Modern City Apartment",
-    "location": "Kandy",
-    "postcode": "K02",
+    "location": "89 Temple Street, Kandy",
+    "postcode": "20000",
     "type": "Flat",
     "category": "For Rent",
     "price": 180000,
-    "bedrooms": 2,
+    "bedrooms": 4,
+    "bathrooms": 3,
     "dateAdded": "2025-01-25",
     "mainImage": "property2/main.jpg",
     "images": [
@@ -41,18 +43,20 @@
       "property2/5.webp",
       "property2/6.webp"
     ],
-    "longDescription": "A modern apartment close to Kandy city with easy access to transport and shopping areas.",
+    "shortDescription":"A modern apartment close to Kandy city with easy access to transport and shopping areas.",
+    "longDescription": "This stylish modern city apartment is located in the heart of Kandy, offering a perfect balance of urban convenience and scenic surroundings. Designed with contemporary living in mind, the apartment features sleek interiors, open-plan spaces, and large windows that invite natural light and city views. The living and dining areas flow effortlessly, creating a comfortable setting for everyday living and entertaining. Well-appointed bedrooms provide privacy and relaxation, ideal for professionals, couples, or small families. A modern kitchen and smartly designed amenities ensure practicality without compromising on style. With easy access to key city attractions, transport, and essential services, this apartment delivers modern city living at its best in Kandy.",
     "floorPlan": "property2/floorplan.webp"
   },
   {
     "id": "3",
     "title": "Beachside Villa",
-    "location": "Galle",
-    "postcode": "G03",
+    "location": "B4,Sevanapitiya,Galle,",
+    "postcode": "80000",
     "type": "House",
     "category": "For Sale",
     "price": 500000,
     "bedrooms": 5,
+    "bathrooms": 3,
     "dateAdded": "2025-02-01",
     "mainImage": "property3/main.webp",
     "images": [
@@ -63,18 +67,20 @@
       "property3/5.webp",
       "property3/6.webp"
     ],
-    "longDescription": "A beautiful beachside villa with stunning sea views and private outdoor spaces.",
+    "shortDescription":"A beautiful beachside villa with stunning sea views and private outdoor spaces.",
+    "longDescription": "This stunning beachside villa offers an unmatched coastal lifestyle with direct access to sun, sand, and sea. Designed for effortless luxury, the villa features open-plan living spaces, elegant interiors, and panoramic ocean views. Large glass doors blur the line between indoor comfort and outdoor relaxation, creating a breezy, resort-like atmosphere. The spacious bedrooms provide serene retreats, accompanied by the soothing sound of waves. A modern kitchen and private outdoor areas make entertaining and everyday living a pleasure. Perfect as a family getaway or luxury retreat, this villa delivers exclusive beachfront living at its finest.",
     "floorPlan": "property3/floorplan.webp"
   },
   {
     "id": "4",
     "title": "Small Studio Apartment",
-    "location": "Colombo",
-    "postcode": "C02",
+    "location": "45, Park Lane or 10, Sir James Peiris Mawatha",
+    "postcode": "00300",
     "type": "Flat",
     "category": "For Rent",
     "price": 90000,
     "bedrooms": 1,
+    "bathrooms": 3,
     "dateAdded": "2025-01-15",
     "mainImage": "property4/main.webp",
     "images": [
@@ -85,18 +91,20 @@
       "property4/5.webp",
       "property4/6.webp"
     ],
-    "longDescription": "A compact studio apartment suitable for students or professionals in Colombo.",
+    "shortDescription":"A compact studio apartment suitable for students or professionals in Colombo.",
+    "longDescription": "This well-designed studio apartment is ideally located in the heart of Colombo, offering smart city living in a compact space. Thoughtfully planned interiors maximize functionality while maintaining a modern, stylish feel. An open-plan layout seamlessly combines living, dining, and sleeping areas for effortless everyday comfort. Large windows allow natural light to brighten the space, enhancing its airy atmosphere. A contemporary kitchenette and neatly finished bathroom add convenience and practicality. Perfect for professionals or urban dwellers, this studio delivers efficient and comfortable city living in Colombo.",
     "floorPlan": "property4/floorplan.webp"
   },
   {
     "id": "5",
     "title": "Country Side House",
-    "location": "Kurunegala",
-    "postcode": "KUR1",
+    "location": "B13,Dehiwatte,Kurunegala,Sri Lanka",
+    "postcode": "60000",
     "type": "House",
     "category": "For Sale",
     "price": 200000,
     "bedrooms": 3,
+    "bathrooms": 3,
     "dateAdded": "2024-12-20",
     "mainImage": "property5/main.webp",
     "images": [
@@ -107,18 +115,20 @@
       "property5/5.webp",
       "property5/6.webp"
     ],
-    "longDescription": "A peaceful countryside house ideal for families looking for quiet surroundings.",
+    "shortDescription":"A peaceful countryside house ideal for families looking for quiet surroundings.",
+    "longDescription": "This peaceful countryside house offers a refreshing escape surrounded by open landscapes and natural beauty. Designed for relaxed living, the home features spacious interiors, simple elegance, and a strong connection to the outdoors. Comfortable living and dining areas create a welcoming space for family gatherings and quiet evenings. The bedrooms provide calm, restful retreats enhanced by fresh air and scenic views. A functional kitchen and generous outdoor spaces support an easy, unhurried lifestyle. Ideal for families or nature lovers, this home delivers the true charm of countryside living.",
     "floorPlan": "property5/floorplan.webp"
   },
   {
     "id": "6",
     "title": "Luxury Penthouse",
-    "location": "Colombo",
-    "postcode": "C03",
+    "location": "No. 15, Galle Road, Bambalapitiya, Colombo 4, Sri Lanka",
+    "postcode": "00300",
     "type": "Flat",
     "category": "For Sale",
     "price": 600000,
     "bedrooms": 4,
+    "bathrooms": 3,
     "dateAdded": "2025-02-18",
     "mainImage": "property6/main.webp",
     "images": [
@@ -129,18 +139,20 @@
       "property6/5.webp",
       "property6/6.webp"
     ],
-    "longDescription": "A premium penthouse apartment with luxury interiors and panoramic city views.",
+    "shortDescription":"A premium penthouse apartment with luxury interiors and panoramic city views.",
+    "longDescription": "This exclusive luxury penthouse redefines high-end city living with breathtaking panoramic views and exceptional design. The residence features expansive open-plan interiors, floor-to-ceiling windows, and premium finishes throughout. Elegant living and dining spaces flow seamlessly, creating the perfect setting for sophisticated entertaining. The private bedrooms offer refined comfort, with the master suite delivering a true sanctuary above the city. A state-of-the-art kitchen and high-end amenities elevate everyday living to a five-star experience. Designed for those who expect the extraordinary, this penthouse represents the pinnacle of modern luxury living.",
     "floorPlan": "property6/floorplan.webp"
   },
   {
     "id": "7",
-    "title": "Suburban Family Home",
-    "location": "Negombo",
-    "postcode": "N01",
-    "type": "House",
-    "category": "For Rent",
+    "title": "Luxuary Bungalow",
+    "location": "Nuwaraeliya",
+    "postcode": "22200",
+    "type": "Bungalow",
+    "category": "For Sale",
     "price": 150000,
-    "bedrooms": 3,
+    "bedrooms": 5,
+    "bathrooms": 3,
     "dateAdded": "2025-01-05",
     "mainImage": "property7/main.webp",
     "images": [
@@ -151,7 +163,8 @@
       "property7/5.webp",
       "property7/6.webp"
     ],
-    "longDescription": "A spacious suburban family home located close to schools and local amenities.",
+    "shortDescription":"A spacious suburban family home located close to schools and local amenities.",
+    "longDescription": "This charming bungalow is set in the cool and tranquil surroundings of Nuwara Eliya, offering a peaceful escape amid lush greenery and misty landscapes. Designed to complement its natural setting, the home features warm interiors, spacious living areas, and large windows with breathtaking views. The cozy living and dining spaces create a welcoming atmosphere ideal for family gatherings and relaxed living. Comfortable bedrooms provide privacy and restful comfort, perfectly suited to the region’s calm climate. A well-appointed kitchen and thoughtfully designed outdoor spaces enhance everyday convenience and enjoyment. Blending classic charm with serene hill-country living, this bungalow offers a truly timeless retreat in Nuwara Eliya.",
     "floorPlan": "property7/floorplan.webp"
   }
 ]

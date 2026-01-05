@@ -5,28 +5,32 @@ function ImageGallery({ images }) {
 
   return (
     <div className="image-gallery">
-      {/* Large image */}
+      {/* MAIN IMAGE */}
       <img
         className="main-image"
-        src={`/images/${mainImage}`}
+        src={`${import.meta.env.BASE_URL}images/${mainImage}`}
         alt="Property"
       />
 
-      {/* Thumbnails */}
-      <div className="thumbnails">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={`/images/${img}`}
-            alt="Thumbnail"
-            onClick={() => setMainImage(img)}
-          />
-        ))}
+      {/* THUMBNAILS */}
+      <div className="thumbnails-wrapper">
+        <div className="thumbnails">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={`${import.meta.env.BASE_URL}images/${img}`}
+              alt={`Thumbnail ${index + 1}`}
+              onClick={() => setMainImage(img)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
 
 export default ImageGallery;
+
+
 
 

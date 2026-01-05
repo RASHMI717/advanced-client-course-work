@@ -19,7 +19,7 @@ function FavouritesSidebar({ favourites, onRemove, onDrop, onClear }) {
       {favourites.length === 0 && (
         <div className="empty-state">
           <img
-            src="/images/empty-favourites.png"
+            src="./images/empty-favourites.png"
             alt="No favourites"
           />
           <p>No favourites yet</p>
@@ -43,12 +43,12 @@ function FavouritesSidebar({ favourites, onRemove, onDrop, onClear }) {
 
             {/* ✅ Click card → go to property page */}
             <Link
-              to={`/property/${property.id}`}
+              to={`./property/${property.id}`}
               className="favourite-link"
             >
               {/* Thumbnail */}
               <img
-                src={`/images/${property.images[0]}`}
+                src={`./images/${property.images[0]}`}
                 alt={property.title}
               />
 

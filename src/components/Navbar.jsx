@@ -4,7 +4,7 @@ import "./Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // 🔑 ADD SCROLL EFFECT (ONLY THIS PART IS NEW)
+  //  SCROLL EFFECT: Add class 'scrolled' when window scrolls
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
@@ -18,30 +18,39 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  // 🔑 END OF ADDITION
+
+  //  Scroll to section
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // close mobile menu
+    }
+  };
 
   return (
     <nav className="navbar">
-      {/* Left */}
+      {/* Left: Logo */}
       <div className="nav-left">
-        <img src="/images/logo.png" alt="Logo" />
+        <img
+          src={`${import.meta.env.BASE_URL}images/logo.png`}
+          alt="Logo"
+        />
       </div>
 
-      {/* Center (desktop menu) */}
+      {/* Center: Desktop menu */}
       <ul className="nav-center">
-        <li>Home</li>
-        <li>Properties</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Testimonials</li>
-        <li>Contact</li>
-
+        <li onClick={() => scrollToSection("home")}>Home</li>
+        <li onClick={() => scrollToSection("properties")}>Properties</li>
+        <li onClick={() => scrollToSection("about")}>About</li>
+        <li onClick={() => scrollToSection("services")}>Services</li>
+        <li onClick={() => scrollToSection("testimonials")}>Testimonials</li>
+        <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
 
-      {/* Right */}
+      {/* Right: Hamburger for mobile */}
       <div className="nav-right">
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -53,16 +62,16 @@ function Navbar() {
         </div>
       </div>
 
-      {/* 🔽 Mobile menu card */}
+      {/* Mobile menu */}
       {menuOpen && (
         <div className="mobile-menu">
           <ul>
-            <li onClick={() => setMenuOpen(false)}>Home</li>
-            <li onClick={() => setMenuOpen(false)}>Properties</li>
-            <li onClick={() => setMenuOpen(false)}>About</li>
-            <li onClick={() => setMenuOpen(false)}>Services</li>
-            <li onClick={() => setMenuOpen(false)}>Testimonials</li>
-            <li onClick={() => setMenuOpen(false)}>Contact</li>
+            <li onClick={() => scrollToSection("home")}>Home</li>
+            <li onClick={() => scrollToSection("properties")}>Properties</li>
+            <li onClick={() => scrollToSection("about")}>About</li>
+            <li onClick={() => scrollToSection("services")}>Services</li>
+            <li onClick={() => scrollToSection("testimonials")}>Testimonials</li>
+            <li onClick={() => scrollToSection("contact")}>Contact</li>
           </ul>
         </div>
       )}
@@ -71,5 +80,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 

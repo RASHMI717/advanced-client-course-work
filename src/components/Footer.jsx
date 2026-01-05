@@ -12,7 +12,7 @@ function Footer() {
         {/* LEFT — BRAND */}
         <div className="footer-col footer-brand">
           <img
-            src="/images/logo.png"
+            src={`${import.meta.env.BASE_URL}/images/logo.png`}
             alt="Real Estate Logo"
             className="footer-logo"
           />
@@ -23,9 +23,9 @@ function Footer() {
           </p>
 
           <div className="footer-socials">
-            <a href="#"><img src="/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="/instagram.svg" alt="Instagram" /></a>
-            <a href="#"><img src="/twitter.svg" alt="Twitter" /></a>
+            <a href="#"><img src= {`${import.meta.env.BASE_URL}/facebook.svg`} alt="Facebook" /></a>
+            <a href="#"><img src= {`${import.meta.env.BASE_URL}/instagram.svg`} alt="Instagram" /></a>
+            <a href="#"><img src= {`${import.meta.env.BASE_URL}/twitter.svg`} alt="Twitter" /></a>
           </div>
         </div>
 

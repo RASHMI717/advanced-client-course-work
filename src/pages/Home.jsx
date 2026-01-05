@@ -45,13 +45,17 @@ function Home({ favourites, addFavourite, removeFavourite, clearFavourites }) {
   return (
     <DndProvider backend={HTML5Backend}>
       <Navbar />
-      <Hero />
+
+      {/* Hero section */}
+      <section id="home">
+        <Hero />
+      </section>
 
       {/* 🔑 SEARCH BAR (shared visually between Hero + Properties via CSS) */}
       <SearchBar onSearch={handleSearch} />
 
       {/* ✅ EVERYTHING INSIDE ONE SECTION (FIXED) */}
-      <section className="properties-section">
+      <section id="properties" className="properties-section">
         {/* HEADER */}
         <p className="section-subtitle">PROPERTIES</p>
         <h2 className="section-title">
@@ -82,10 +86,26 @@ function Home({ favourites, addFavourite, removeFavourite, clearFavourites }) {
         </div>
       </section>
 
-      <About />
-      <Services />
-      <Testimonials />
-      <Contact />
+      {/* About section */}
+      <section id="about">
+        <About />
+      </section>
+
+      {/* Services section */}
+      <section id="services">
+        <Services />
+      </section>
+
+      {/* Testimonials section */}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      {/* Contact section */}
+      <section id="contact">
+        <Contact />
+      </section>
+
       <Footer />
     </DndProvider>
   );

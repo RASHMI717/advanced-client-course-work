@@ -96,7 +96,7 @@
 
 /* === BOTTOM INFO ROW === */
 .property-info {
-  display: flex;                 /* 🔑 side-by-side */
+  display: flex;                 /*  side-by-side */
   justify-content: space-between;
   align-items: center;
 }

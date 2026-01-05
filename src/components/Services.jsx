@@ -19,7 +19,7 @@ export default function Services() {
           <div className="service-card">
             <div className="service-icon">
               <img
-                src="/icon1.svg"
+                src="./icon1.svg"
                 alt="Sell Property Icon"
               />
             </div>
@@ -37,7 +37,7 @@ export default function Services() {
           <div className="service-card">
             <div className="service-icon">
               <img
-                src="/icon2.svg"
+                src="./icon2.svg"
                 alt="Home Loans Icon"
               />
             </div>
@@ -55,7 +55,7 @@ export default function Services() {
           <div className="service-card">
             <div className="service-icon">
               <img
-                src="/icon3.svg"
+                src="./icon3.svg"
                 alt="Legal Services Icon"
               />
             </div>
