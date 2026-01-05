@@ -10,8 +10,8 @@
   padding: 0 32px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 🔑 FIX */
-  gap: 80px; /* 🔑 CONTROL COLUMN GAP */
+  align-items: flex-start; /*  FIX */
+  gap: 80px; /*  CONTROL COLUMN GAP */
 }
 
 /* ---------- BRAND COLUMN ---------- */
@@ -21,7 +21,7 @@
 
 .footer-logo {
   width: 180px;
-  margin-bottom: 12px; /* 🔑 closer to text */
+  margin-bottom: 12px; /*  closer to text */
 }
 
 .footer-text {

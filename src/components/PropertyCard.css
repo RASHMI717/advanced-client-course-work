@@ -15,7 +15,7 @@
 
 /* === IMAGE SECTION === */
 .property-image-wrapper {
-  position: relative; /* 🔑 allows absolute positioning inside */
+  position: relative; /*  allows absolute positioning inside */
 }
 
 .property-image-wrapper img {
@@ -26,7 +26,7 @@
 
 /* === SALE / RENT TAG === */
 .tag {
-  position: absolute; /* 🔑 places ON image */
+  position: absolute; /*  places ON image */
   top: 12px;
   left: 12px;
   padding: 6px 14px;
@@ -52,7 +52,7 @@
 
 /* === ADDRESS ROW (ICON + STAR) === */
 .address-row {
-  display: flex;               /* 🔑 horizontal layout */
+  display: flex;               /*  horizontal layout */
   justify-content: space-between; /* left + right */
   align-items: center;
   margin-bottom: 8px;

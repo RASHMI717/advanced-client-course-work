@@ -4,9 +4,9 @@
 ================================ */
 
 .search-wrapper {
-  position: absolute;              /* 🔑 removes from normal flow */
+  position: absolute;              /*  removes from normal flow */
   left: 50%;
-  bottom: -130px;                   /* 🔑 pushes it into properties */
+  bottom: -130px;                   /*  pushes it into properties */
   transform: translateX(-50%);
 
   width: 100%;
