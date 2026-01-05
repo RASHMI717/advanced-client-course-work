@@ -122,7 +122,7 @@
 
 /* Price (VERTICALLY CENTERED) */
 .fav-price {
-  margin-top: auto; /* 🔑 pushes price to middle-right */
+  margin-top: auto; /*  pushes price to middle-right */
   font-size: 14px;
   font-weight: 600;
   color: #1b1a19;

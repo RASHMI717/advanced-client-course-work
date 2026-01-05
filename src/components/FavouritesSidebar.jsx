@@ -20,16 +20,16 @@ function FavouriteItem({ property, onRemove }) {
       className="favourite-card"
       style={{ opacity: isDragging ? 0.4 : 1 }}
     >
-      {/* ❌ Remove icon */}
+      {/* Remove icon */}
       <i
         className="fa-solid fa-xmark remove-icon"
         onClick={(e) => {
-          e.stopPropagation(); // 🚫 prevent navigation
+          e.stopPropagation(); // prevent navigation
           onRemove(property.id);
         }}
       ></i>
 
-      {/* ✅ Click card → go to property page */}
+      {/*  Click card → go to property page */}
       <Link to={`./property/${property.id}`} className="favourite-link">
         {/* Thumbnail */}
         <img
@@ -70,7 +70,7 @@ function FavouritesSidebar({ favourites, onRemove, onDrop, onClear }) {
         </div>
       )}
 
-      {/* 🔑 Wrapper for scrolling */}
+      {/*  Wrapper for scrolling */}
       <div className="favourites-list">
         {favourites.map((property) => (
           <FavouriteItem
