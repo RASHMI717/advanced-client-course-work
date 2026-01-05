@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //  SCROLL EFFECT: Add class 'scrolled' when window scrolls
+  //  SCROLL EFFECT
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
@@ -21,14 +24,32 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  //  Scroll to section
+  // 🔑 Scroll or navigate
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // close mobile menu
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      setMenuOpen(false);
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        setMenuOpen(false);
+      }
     }
   };
+
+  // 🔑 Scroll on hash landing
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const section = document.getElementById(id);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      }
+    }
+  }, [location]);
 
   return (
     <nav className="navbar">
@@ -40,7 +61,7 @@ function Navbar() {
         />
       </div>
 
-      {/* Center: Desktop menu */}
+      {/* Desktop menu */}
       <ul className="nav-center">
         <li onClick={() => scrollToSection("home")}>Home</li>
         <li onClick={() => scrollToSection("properties")}>Properties</li>
@@ -50,7 +71,7 @@ function Navbar() {
         <li onClick={() => scrollToSection("contact")}>Contact</li>
       </ul>
 
-      {/* Right: Hamburger for mobile */}
+      {/* Mobile hamburger */}
       <div className="nav-right">
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}

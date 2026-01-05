@@ -4,12 +4,11 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import PropertyPage from "./pages/PropertyPage";
 
-
 function App() {
-  // ✅ ADD: favourites state lifted here (persistent across pages)
+  // ✅ favourites state lifted here (persistent across pages)
   const [favourites, setFavourites] = useState([]);
 
-  // ✅ ADD: handlers
+  // ✅ handlers
   function addFavourite(property) {
     setFavourites((prev) =>
       prev.find((p) => p.id === property.id) ? prev : [...prev, property]
@@ -55,5 +54,6 @@ function App() {
 }
 
 export default App;
+
 
 
